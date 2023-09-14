@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <div><i class="bi bi-list"></i></div>
+        <div>Wordle</div>
+        <div>
+            <i class="bi bi-question-circle-fill"></i>
+            <i class="bi bi-bar-chart-fill"></i>
+            <i class="bi bi-tools"></i>
+        </div>
+    </header>
+
+    <section class="game-board">
+        <div class="row" id="row1" data-letters="">
+            <div class="guess" id="row1guess1"></div>
+            <div class="guess" id="row1guess2"></div>
+            <div class="guess" id="row1guess3"></div>
+            <div class="guess" id="row1guess4"></div>
+            <div class="guess" id="row1guess5"></div>
+        </div>
+        <div class="row" id="row2" data-letters="">
+            <div class="guess" id="row2guess1"></div>
+            <div class="guess" id="row2guess2"></div>
+            <div class="guess" id="row2guess3"></div>
+            <div class="guess" id="row2guess4"></div>
+            <div class="guess" id="row2guess5"></div>
+        </div>
+        <div class="row" id="row3" data-letters="">
+            <div class="guess" id="row3guess1"></div>
+            <div class="guess" id="row3guess2"></div>
+            <div class="guess" id="row3guess3"></div>
+            <div class="guess" id="row3guess4"></div>
+            <div class="guess" id="row3guess5"></div>
+        </div>
+        <div class="row" id="row4" data-letters="">
+            <div class="guess" id="row4guess1"></div>
+            <div class="guess" id="row4guess2"></div>
+            <div class="guess" id="row4guess3"></div>
+            <div class="guess" id="row4guess4"></div>
+            <div class="guess" id="row4guess5"></div>
+        </div>
+        <div class="row" id="row5" data-letters="">
+            <div class="guess" id="row5guess1"></div>
+            <div class="guess" id="row5guess2"></div>
+            <div class="guess" id="row5guess3"></div>
+            <div class="guess" id="row5guess4"></div>
+            <div class="guess" id="row5guess5"></div>
+        </div>
+        <div class="row" id="row6" data-letters="">
+            <div class="guess" id="row6guess1"></div>
+            <div class="guess" id="row6guess2"></div>
+            <div class="guess" id="row6guess3"></div>
+            <div class="guess" id="row6guess4"></div>
+            <div class="guess" id="row6guess5"></div>
+        </div>
+        <button class="playAgain play-again" type="button">Play Again</button>
+    </section>
+    
+    <div id="keyboard">
+        <div class="first-row">
+            <button class="keyboard-button" id="Q">Q</button>
+            <button class="keyboard-button" id="W">W</button>
+            <button class="keyboard-button" id="E">E</button>
+            <button class="keyboard-button" id="R">R</button>
+            <button class="keyboard-button" id="T">T</button>
+            <button class="keyboard-button" id="Y">Y</button>
+            <button class="keyboard-button" id="U">U</button>
+            <button class="keyboard-button" id="I">I</button>
+            <button class="keyboard-button" id="O">O</button>
+            <button class="keyboard-button" id="P">P</button>
+        </div>
+        <div class="second-row">
+            <button class="keyboard-button" id="A">A</button>
+            <button class="keyboard-button" id="S">S</button>
+            <button class="keyboard-button" id="D">D</button>
+            <button class="keyboard-button" id="F">F</button>
+            <button class="keyboard-button" id="G">G</button>
+            <button class="keyboard-button" id="H">H</button>
+            <button class="keyboard-button" id="J">J</button>
+            <button class="keyboard-button" id="K">K</button>
+            <button class="keyboard-button" id="L">L</button>
+        </div>
+        <div class="third-row">
+            <button class="keyboard-button" style="width: 130px">Enter</button>
+            <button class="keyboard-button" id="Z">Z</button>
+            <button class="keyboard-button" id="X">X</button>
+            <button class="keyboard-button" id="C">C</button>
+            <button class="keyboard-button" id="V">V</button>
+            <button class="keyboard-button" id="B">B</button>
+            <button class="keyboard-button" id="N">N</button>
+            <button class="keyboard-button" id="M">M</button>
+            <button class="keyboard-button" style="width: 120px">Del</button> 
+        </div>
+    </div>
+    <section class="result">
+        <div class="pop-up" id="lose-pop-up">
+            <img src="sadFace.PNG" width="150">
+            <p>You are out of guess</p>
+            <p id="solution"></p>
+            <button class="play-again">Try again</button>
+        </div>   
+        
+        <div class="pop-up" id="win-pop-up">
+            <img src="tick.PNG" width="150">
+            <p>YOU WIN</p>
+            <p>CONGRATULATION!!!</p>
+            <div class="end">
+                <button type="button" id="close">Close <i class="bi bi-x"></i></button>
+                <button type="button" class="play-again">Play again</button>
+            </div>
+        </div>
+
+        <div class="pop-up" id="alert">
+            <img src="cross.PNG" width="150">
+            <p>Your guess must contains 5 characters</p>
+            <button type="button" id="close-alert">Close <i class="bi bi-x"></i></button>
+        </div>
+    </section>
+
+
+    <section class="keyboard"></section>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

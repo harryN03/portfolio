@@ -1,0 +1,136 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 40px;
+    margin: 10px 20px 20px 20px;
+    border-bottom: 2px solid #c4c0c0;
+}
+header div {
+    width: 150px;
+}
+.game-board {
+    width: 320px;
+    margin: auto;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.guess {
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border: 2px rgb(182, 177, 177) solid;
+    width:60px;
+    height:60px;
+}
+
+.has-letter {
+    border: 2px black solid;
+}
+
+.absent {
+    color: white;
+    background-color: #939598;
+}
+
+.present {
+    color: white;
+    background-color: #c9b458;
+}
+
+.correct {
+    color: white;
+    background-color: #538d4e;
+}
+
+.pop-up {
+  width: 40%;
+  margin:auto;
+  background: white;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left:30%;
+  transform: translate(-50%,-50%), scale(0.1);
+  text-align: center;
+  transition: transform 0.4s, top 0.4s;
+  visibility: hidden;
+  font-size: 30px;
+  text-align: center;
+  z-index: 2;
+}
+
+
+.open-pop-up {
+    visibility: visible;
+    top: 30%;
+    transform: translate(-50%,-50%), scale(0.1);
+}
+
+#close, #close-alert {
+    font-size: 30px;
+    color: white;
+    border: 1px solid rgb(101, 97, 97);
+    background-color: rgb(189, 6, 6);
+}
+#close-alert {
+    margin-bottom: 10px;
+}
+.play-again{
+    font-size: 30px;
+    color: white;
+    border: 1px solid white;
+    background-color: #538d4e;
+}
+.body-win {
+    background-color: #c4c0c0;
+    z-index: -5;
+}
+
+.pop-up img {
+    position: relative;
+    border-radius: 50%;
+    top: -65px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.end {
+    display: flex;
+    height: 40px;
+    margin: 5px;
+    justify-content: space-around;
+}
+
+.playAgain {
+    position: relative;
+    bottom:100px;
+    left: 125%;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 6px;
+    visibility: hidden;
+}
+.show-playAgain {
+    visibility: visible;
+}
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    align-items: center;
+}
+
+#keyboard button {
+    margin: 5px;
+    font-size: 40px;
+    height: 60px;
+    width: 80px;
+    border-radius: 8px;
+    border: none;
+}
